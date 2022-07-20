@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled5/main.dart';
+import 'package:notepad/main.dart';
 
 class Notepad extends StatelessWidget {
   const Notepad({Key? key}) : super(key: key);
