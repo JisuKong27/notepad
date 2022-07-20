@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class MemoSpace extends StatelessWidget {
   const MemoSpace({Key? key}) : super(key: key);
 
-
   @override
   Widget build(BuildContext context) {
     return Container(

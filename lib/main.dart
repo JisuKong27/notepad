@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notepad/writing_button.dart';
-
-import 'memo_space.dart';
+import 'package:notepad/screens/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,67 +10,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        margin: const EdgeInsets.fromLTRB(20, 70, 20, 70),
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        child: Column(
-          children:[
-            SizedBox(
-              width: MediaQuery.of(context).size.width,
-              height: 50,
-              child: const Text(
-                "메모",
-                style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.blueAccent
-                ),
-              ),
-            ),
-            Container(
-              height: 440,
-              child: SingleChildScrollView(
-                child: Column(
-                children:const [
-                  MemoSpace(
-                  ),
-                  MemoSpace(
-                  ),
-                  MemoSpace(
-                  ),
-                  MemoSpace(
-                  ),
-                  MemoSpace(
-                  ),
-                ],
-              ),
-              ),
-            ),
-            const WritingButton(
-            ),
-          ],
-        ),
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.deepOrange, primaryColor: Colors.white // 색 지정을 하지 않을 시 할당 된 색으로 입력 된다.
       ),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }

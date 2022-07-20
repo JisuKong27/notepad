@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'notepad.dart';
 
 class WritingButton extends StatelessWidget {
